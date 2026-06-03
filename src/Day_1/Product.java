@@ -1,6 +1,6 @@
 package Day_1;
 
-public class Product {
+public class Product implements Displayable {
     public String name;
     public double price;
     double discount=0;
@@ -21,10 +21,15 @@ public class Product {
         }
     }
 
+    @Override
+    public void display() {
+        displayProduct();
+    }
+
     public static void main(String[] args) {
         Product p = new Product("Pen",100);
         p.displayProduct();
         p.applydiscount(70);
-        p.displayProduct();
+        p.display();
     }
 }

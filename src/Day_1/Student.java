@@ -1,8 +1,8 @@
 package Day_1;
 
-public class Student {
-    private String name;
-    private String grade;
+public class Student implements Displayable {
+    private final String name;
+    private final String grade;
     private double gpa;
 
     public Student(String name, String grade, double gpa) {
@@ -27,9 +27,14 @@ public class Student {
         return gpa;
     }
 
+    @Override
+    public void display() {
+        displayInfo();
+    }
+
     public static void main(String[] args) {
         Student s = new Student("Raj","A",8.9);
-        s.displayInfo();
+        s.display();
         double studentGPA= s.getGPA();
         System.out.println(studentGPA);
     }
