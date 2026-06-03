@@ -1,16 +1,37 @@
+import Day_1.Car;
+import Day_1.ElectricCar;
+import Day_1.Vehicle;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
+        Vehicle v1 = new Vehicle("Volvo", "X1");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Vehicle v2 = new Car(
+                "Toyota",
+                "Corolla",
+                "Petrol"
+        );
+
+        Vehicle v3 = new ElectricCar(
+                "Tesla",
+                "Model 3",
+                "Electric",
+                85
+        );
+
+        System.out.println("Vehicle:");
+        v1.displayInfo();
+
+        System.out.println();
+
+        System.out.println("Car:");
+        v2.displayInfo();
+
+        System.out.println();
+
+        System.out.println("Electric Car:");
+        v3.displayInfo();
     }
 }
